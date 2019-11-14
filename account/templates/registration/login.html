@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <div class="login-form-container">
+        {% if form.errors %}
+            <p>Provided information did not match.</p>
+        {% else %}
+            <h3>Login to Bookmarks</h3>
+        {% endif %}
+
+        <p>Fill this form with valid information</p>
+        <form action="." method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{{ next }}">
+            <button class="waves-effect waves-light btn" type="submit">Login</button>
+            <br> <br>
+            <a class="waves-effect waves-light btn" href='{% url "social:begin" "google-oauth2" %}'>Signin with Google</a>
+            <br>
+            <a href="{% url 'password_reset' %}">Forgot password? Change now</a>
+        </form>
+    </div>
+{% endblock %}

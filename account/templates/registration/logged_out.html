@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="logged-out-section">
+    <div class="logged-out-content">
+        <h3>Logged Out</h3>
+        <p><a href="{% url 'login' %}">login again</a></p>
+    </div>
+</section>
+{% endblock %}

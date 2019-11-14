@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row mt-3">
+  <div class="container">
+    <div class="col s6">
+      <h3>Bookmark an image</h3>
+      <img src="{{ request.GET.url }}" alt="preview" class="img_preview">
+    </div>
+    <div class="col s6">
+      <form action="." method="POST" id="image_create_form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="waves-effect waves-light btn" type="submit" value="Bookmark it!">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

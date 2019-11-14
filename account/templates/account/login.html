@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <div class="login-form-container">
+        <h3>Login to Bookmarks</h3>
+        <p>Fill this form with valid information</p>
+        <form action="." method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="waves-effect waves-light btn" type="submit">Login</button>
+        </form>
+    </div>
+{% endblock %}

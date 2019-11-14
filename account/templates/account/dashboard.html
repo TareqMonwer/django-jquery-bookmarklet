@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="col s9">
+        <h1>Dashboard</h1>
+
+
+        {% with total_images_created=request.user.images_created.count %}
+            <h4>Welcome to your dashboard. You have bookmarked
+            {{ total_images_created }} image{{ total_images_created | pluralize }}.</h4>
+        {% endwith %}
+
+        <p>
+          Drag the following button to your bookmarks toolbar to bookmark imagesfrom other websites →
+          <a href='javascript:{% include "bookmarklet_luncher.js" %}' class="waves-effect waves-light btn">Bookmark it</a>
+        </p>
+    </div>
+
+    <div class="col s3">
+        <div class="user-settings">
+          <div class="collection">
+            <a href="{% url 'password_change' %}" class="collection-item">Change Password</a>
+            <a href="{% url 'edit_profile' %}" class="collection-item">Update Profile</a>
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

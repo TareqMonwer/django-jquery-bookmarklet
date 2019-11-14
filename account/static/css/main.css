@@ -1,0 +1,48 @@
+*, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+.mt-3 { margin-top: 30px; }
+
+.login-form-container h3,
+.login-form-container p {
+    padding: 10px 0;
+}
+
+.errorlist.nonfield {
+    list-style: none;
+    margin-left: 10px;
+    font-size: 16px;
+    color:
+    #ee5252;
+}
+
+ul.messages {
+    margin: 20px;
+    list-style: none;
+}
+
+ul.messages li {
+    background: darkseagreen;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_preview {
+    width: 100%;
+    margin-top: 2em;
+}
+
+#image_create_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}

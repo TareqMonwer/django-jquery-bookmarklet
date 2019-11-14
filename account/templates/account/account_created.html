@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-1">
+        <h1>Hi! {{ user.username | title }}</h1>
+        <h4>Your account has been created successfully.</h4>
+        <hr>
+        <h5><a href="{% url 'edit_profile' %}">Edit your profile</a></h5>
+    </div>
+</div>
+{% endblock %}
