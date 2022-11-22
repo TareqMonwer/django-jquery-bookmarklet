@@ -21,7 +21,7 @@ social-auth-core = "==3.2.0"
 sqlparse = "==0.3.0"
 urllib3 = "==1.25.8"
 Django = "==2.2.20"
-Pillow = "==8.1.1"
+Pillow = "==9.3.0"
 PyJWT = "==1.7.1"
 
 [requires]
